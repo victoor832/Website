@@ -1,0 +1,80 @@
+div[data-astro-cid-5taktgaz].brutal-card {
+  background-color:var(--color);
+  border-radius:0.5rem;
+  border:3px solid black;
+  filter:drop-shadow(7px 7px 0 rgb(0 0 0 / 1));
+  transition:all;
+  padding:1rem;
+  transition-duration:0.5s;
+  animation:ease-in-out
+}
+div[data-astro-cid-5taktgaz].brutal-card:hover {
+  filter:drop-shadow(5px 5px 0 rgb(0 0 0 / 1))
+}
+
+
+div[data-astro-cid-5taktgaz]#brutal-card {
+  background-color:var(--color);
+  border-radius:0.5rem;
+  border:3px solid black;
+  transition:all;
+  padding:1rem;
+  transition-duration:0.5s;
+  animation:ease-in-out
+}
+
+
+div[data-astro-cid-5taktgaz]#brutal-card{
+  overflow: hidden; 
+  /* Border Radius */
+  border-radius: 10px;
+}
+
+div[data-astro-cid-5taktgaz]#brutal-card{
+  overflow: hidden;
+  /* Glow Blur */
+  filter: blur(0px);
+}
+
+div[data-astro-cid-5taktgaz]#brutal-card:before, div[data-astro-cid-5taktgaz]#brutal-card:before {
+  content: '';
+  z-index: -2;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  position: absolute;
+  width: 99999px;
+  height: 99999px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  /*border color, change middle color*/
+  background-image: conic-gradient(rgba(0,0,0,0), #9EDD88, rgba(0,0,0,0) 25%);
+  /* change speed here */
+  animation: rotate 4s linear infinite;
+}
+
+div[data-astro-cid-5taktgaz]#brutal-card:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  /* border width */
+  left: 5px;
+  top: 5px;
+  /* double the px from the border width left */
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  /*bg color*/
+  background: #171717;
+  /*box border radius*/
+  border-radius: 7px;
+}
+
+@keyframes rotate {
+  100% {
+    transform: translate(-50%, -50%) rotate(1turn);
+  }
+}
+div[data-astro-cid-5taktgaz]#brutal-card:hover {
+  filter:drop-shadow(5px 5px 0 rgb(0 0 0 / 1))
+}

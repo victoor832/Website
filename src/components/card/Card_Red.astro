@@ -1,0 +1,35 @@
+---
+interface Props {
+  color?: string | undefined;
+}
+import colors from './config/colors.json';
+
+if (Astro.props.color === undefined) {
+  Astro.props.color =
+    colors[Math.floor(Math.random() * colors.length)];
+}
+
+const { color } = Astro.props;
+---
+
+<style >
+  div.brutal-card-red {
+    background-color: var(--color);
+    border-radius: 0.5rem;
+    border: 3px solid black;
+    filter: drop-shadow(7px 7px 0 rgb(0 0 0 / 1));
+    transition: all;
+    padding: 1rem;
+    background-color: #fca5a5;
+    transition-duration: 0.5s;
+    animation: ease-in-out;
+    text-align: center;
+  }
+  div.brutal-card-red:hover {
+    filter: drop-shadow(5px 5px 0 rgb(0 0 0 / 1));
+  }
+</style>
+
+<div class='brutal-card-red'>
+  <slot />
+</div>
